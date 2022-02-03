@@ -1,12 +1,14 @@
 package com.janadri.springframe.phone;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Samsung {
 
 	@Autowired
+//	@Qualifier("snapdragon")        This will prioritize the component "SnapDragon" over "MediaTek"
 	MobileProcessor cpu;
 	
 	public MobileProcessor getCpu() {
