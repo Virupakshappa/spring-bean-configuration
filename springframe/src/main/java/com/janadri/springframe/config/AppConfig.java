@@ -1,22 +1,10 @@
 package com.janadri.springframe.config;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.janadri.springframe.phone.MobileProcessor;
-import com.janadri.springframe.phone.Samsung;
-import com.janadri.springframe.phone.SnapDragon;
-
+@ComponentScan(basePackages= {"com.janadri.springframe.config","com.janadri.springframe.phone","com.janadri.springframe"})
 @Configuration
 public class AppConfig {
 
-	@Bean
-	public Samsung getPhone() {
-		return new Samsung();
-	}
-	
-	@Bean
-	public MobileProcessor getProcessor() {
-		return new SnapDragon();
-	}
 }
